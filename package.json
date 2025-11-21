@@ -1,0 +1,29 @@
+{
+  "name": "script-inventory-auditor",
+  "version": "1.0.0",
+  "description": "A small tool to crawl a website, inventory all JavaScript it finds, and give you a clear view of:",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node src/cli.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alsalmone/script-inventory-auditor.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/alsalmone/script-inventory-auditor/issues"
+  },
+  "homepage": "https://github.com/alsalmone/script-inventory-auditor#readme",
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "cheerio": "^1.1.2"
+  }
+}
