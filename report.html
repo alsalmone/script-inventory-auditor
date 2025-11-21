@@ -1,0 +1,718 @@
+
+    <html>
+    <head>
+      <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        h1 { margin-bottom: 5px; }
+        .summary { display: flex; gap: 20px; margin-bottom: 20px; }
+        .card { background: #f5f5f5; padding: 10px 20px; border-radius: 5px; text-align: center; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ddd; padding: 8px; }
+        th { background: #eee; }
+      </style>
+    </head>
+    <body>
+      
+    <h1>Script Inventory Report</h1>
+    <h2>Site: https://www.bbc.co.uk</h2>
+
+    <div class="summary">
+      <div class="card">Pages Crawled<br><strong>2</strong></div>
+      <div class="card">Unique Scripts<br><strong>61</strong></div>
+      <div class="card">First-party Scripts<br><strong>10</strong></div>
+      <div class="card">Third-party Scripts<br><strong>51</strong></div>
+    </div>
+  
+      
+    <table>
+      <thead>
+        <tr>
+          <th>Script</th>
+          <th>Origin</th>
+          <th>Type</th>
+          <th>Size (bytes)</th>
+          <th>LOC</th>
+          <th>Functions</th>
+          <th>Complexity</th>
+          <th>Usage Count</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <td>inline@sha256:05e65ea9b910e8a81c22ef5055063e526712ce5b76922f69567faa508a0b2f6e</td>
+          <td>first-party</td>
+          <td>inline</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>trivial</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td>inline@sha256:4f7bad98cbede738ab3e227025c5b02d4bf476a59a01bfc77f9410d876aeb911</td>
+          <td>first-party</td>
+          <td>inline</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>trivial</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td>inline@sha256:76a25a14245938cc8c6085db9213cd8e7af23d5e1b01d7cfbc5509e481bb9cfb</td>
+          <td>first-party</td>
+          <td>inline</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>trivial</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td>inline@sha256:c009a524048c7d3d811b8762e399cef9d8e24adfa8b15defaa0cbb9ce04c7f39</td>
+          <td>first-party</td>
+          <td>inline</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>trivial</td>
+          <td>1</td>
+        </tr>
+      
+        <tr>
+          <td>inline@sha256:247502bb09464d31aa6d47397acab5c71beefdbf51853480ef5e0aed0b917501</td>
+          <td>first-party</td>
+          <td>inline</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>trivial</td>
+          <td>1</td>
+        </tr>
+      
+        <tr>
+          <td>inline@sha256:4f1e1b39310c205444383210beab20e5b77905258ef8cfd31ac8cbe4975775a8</td>
+          <td>first-party</td>
+          <td>inline</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>trivial</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td>inline@sha256:598ef83e91ade3a8cebd1ef4d5248e2ec594aaed3a7e2acdb1c0c6c19630c8ee</td>
+          <td>first-party</td>
+          <td>inline</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>trivial</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td>inline@sha256:a862f9ee9a9ba2a4b7f517fb75da3b3fe632b93049c2797f6ff5e8e77cd69ed1</td>
+          <td>first-party</td>
+          <td>inline</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>trivial</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-vendor-optimizely.b3ff64ebf81b666dcde4.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-vendor-optimizely.b3ff64ebf81b666dcde4.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>176429</td>
+          <td>1</td>
+          <td>847</td>
+          <td>very-complex</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-defaultVendors.0b5567879e201808102b.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-defaultVendors.0b5567879e201808102b.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>424698</td>
+          <td>2</td>
+          <td>2366</td>
+          <td>very-complex</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-component-tabs.01d326cdd70b33b9c20d.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-component-tabs.01d326cdd70b33b9c20d.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>12233</td>
+          <td>1</td>
+          <td>80</td>
+          <td>very-complex</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-gel.8da1f6730eeca8e9e6fd.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-gel.8da1f6730eeca8e9e6fd.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>320711</td>
+          <td>1</td>
+          <td>1100</td>
+          <td>very-complex</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-website.ea33c355981b2b00b340.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-website.ea33c355981b2b00b340.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>338667</td>
+          <td>1</td>
+          <td>2790</td>
+          <td>very-complex</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-base-website.9bba6c119644865d0fc6.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-base-website.9bba6c119644865d0fc6.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>19872</td>
+          <td>1</td>
+          <td>239</td>
+          <td>very-complex</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-framework.7ea3550823e28d26a4b9.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-framework.7ea3550823e28d26a4b9.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>217166</td>
+          <td>1</td>
+          <td>1138</td>
+          <td>very-complex</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-pwa.2683743cc697f95dba79.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-pwa.2683743cc697f95dba79.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>17572</td>
+          <td>1</td>
+          <td>31</td>
+          <td>very-complex</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-component-call-to-action-link.57479bcea1792a41f99f.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-component-call-to-action-link.57479bcea1792a41f99f.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>6612</td>
+          <td>1</td>
+          <td>32</td>
+          <td>complex</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-component-global-navigation.72372b83ee12149209d8.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-component-global-navigation.72372b83ee12149209d8.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>37454</td>
+          <td>1</td>
+          <td>136</td>
+          <td>very-complex</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-global-navigation.bb6f62c575ae747d4ec0.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-global-navigation.bb6f62c575ae747d4ec0.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>5990</td>
+          <td>1</td>
+          <td>31</td>
+          <td>very-complex</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-component-product-navigation.6be9094ae0f86606ef85.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-component-product-navigation.6be9094ae0f86606ef85.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>27663</td>
+          <td>1</td>
+          <td>131</td>
+          <td>very-complex</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-component-masthead.f6d8cac601057f2e07bc.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-component-masthead.f6d8cac601057f2e07bc.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>4351</td>
+          <td>1</td>
+          <td>20</td>
+          <td>moderate</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-product-navigation.f477a218b62f9ed3ad34.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-product-navigation.f477a218b62f9ed3ad34.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>1537</td>
+          <td>1</td>
+          <td>11</td>
+          <td>moderate</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-main-heading.1b67b9b11ac48f52f8dc.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-main-heading.1b67b9b11ac48f52f8dc.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>328</td>
+          <td>1</td>
+          <td>3</td>
+          <td>trivial</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-component-metadata-snippet.1de915212ad595bdfda2.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-component-metadata-snippet.1de915212ad595bdfda2.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>4277</td>
+          <td>1</td>
+          <td>22</td>
+          <td>complex</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-component-metadata-strip.1c0a4249eb9fff750ed2.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-component-metadata-strip.1c0a4249eb9fff750ed2.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>3909</td>
+          <td>1</td>
+          <td>22</td>
+          <td>complex</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-component-page-type-indicator.67ea4cc207c086d07c94.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-component-page-type-indicator.67ea4cc207c086d07c94.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>2472</td>
+          <td>1</td>
+          <td>10</td>
+          <td>simple</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-component-promo.f2dbb4d4020311b2b768.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-component-promo.f2dbb4d4020311b2b768.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>20135</td>
+          <td>1</td>
+          <td>79</td>
+          <td>very-complex</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-component-additional-links.b0eb638cc29f56034e98.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-component-additional-links.b0eb638cc29f56034e98.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>4237</td>
+          <td>1</td>
+          <td>23</td>
+          <td>moderate</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-component-information-panel.f6792f725d94ec83bf58.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-component-information-panel.f6792f725d94ec83bf58.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>8875</td>
+          <td>1</td>
+          <td>48</td>
+          <td>very-complex</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-component-error-message.2c044c983e6c8a56025b.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-component-error-message.2c044c983e6c8a56025b.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>1772</td>
+          <td>1</td>
+          <td>6</td>
+          <td>simple</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-component-sport-badge.e236643266f7e04d29dc.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-component-sport-badge.e236643266f7e04d29dc.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>79371</td>
+          <td>1</td>
+          <td>49</td>
+          <td>very-complex</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-component-media-player.ff33d8c9b6b572ea9d6b.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-component-media-player.ff33d8c9b6b572ea9d6b.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>26876</td>
+          <td>1</td>
+          <td>219</td>
+          <td>very-complex</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-component-uas-button.c3c9cdf6fd15f51e4732.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-component-uas-button.c3c9cdf6fd15f51e4732.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>12726</td>
+          <td>1</td>
+          <td>83</td>
+          <td>very-complex</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-component-follow.f641ed7212feaa79bdac.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-component-follow.f641ed7212feaa79bdac.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>16050</td>
+          <td>1</td>
+          <td>37</td>
+          <td>complex</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-component-collection-header.e882628a91d7fc3fab51.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-component-collection-header.e882628a91d7fc3fab51.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>4080</td>
+          <td>1</td>
+          <td>17</td>
+          <td>moderate</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-component-index-promo.10b6bc60be5e5b6f55fc.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-component-index-promo.10b6bc60be5e5b6f55fc.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>8984</td>
+          <td>1</td>
+          <td>36</td>
+          <td>complex</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-component-in-situ-media-promo.0061038343d544f0fda1.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-component-in-situ-media-promo.0061038343d544f0fda1.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>14263</td>
+          <td>1</td>
+          <td>65</td>
+          <td>very-complex</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-component-promo-with-ranking.349a172a7ee26d432989.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-component-promo-with-ranking.349a172a7ee26d432989.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>10385</td>
+          <td>1</td>
+          <td>40</td>
+          <td>very-complex</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-component-short-form-promo.7271e69b675a56cf24ac.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-component-short-form-promo.7271e69b675a56cf24ac.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>9313</td>
+          <td>1</td>
+          <td>43</td>
+          <td>very-complex</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-component-live-preview-promo.6fcb42fe7e279450d9dc.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-component-live-preview-promo.6fcb42fe7e279450d9dc.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>9879</td>
+          <td>1</td>
+          <td>39</td>
+          <td>complex</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-component-high-impact-promo.a069f413b192ed05aaf9.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-component-high-impact-promo.a069f413b192ed05aaf9.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>12339</td>
+          <td>1</td>
+          <td>40</td>
+          <td>very-complex</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-component-portrait-video-promo.7fdaeff785041016457f.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-component-portrait-video-promo.7fdaeff785041016457f.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>7246</td>
+          <td>1</td>
+          <td>42</td>
+          <td>complex</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-component-hierarchical-promo-collection.9b9cbd8543cd02e5f6de.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-component-hierarchical-promo-collection.9b9cbd8543cd02e5f6de.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>10955</td>
+          <td>1</td>
+          <td>42</td>
+          <td>very-complex</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-hierarchical-promo-collection.81f228e8e64edbacf4bc.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-hierarchical-promo-collection.81f228e8e64edbacf4bc.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>1950</td>
+          <td>1</td>
+          <td>7</td>
+          <td>moderate</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-component-forms.8450f984587d12b08cf0.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-component-forms.8450f984587d12b08cf0.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>70159</td>
+          <td>1</td>
+          <td>407</td>
+          <td>very-complex</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-component-reactions.fb13d6060555a418fd5a.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-component-reactions.fb13d6060555a418fd5a.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>25535</td>
+          <td>1</td>
+          <td>129</td>
+          <td>very-complex</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-component-information-wrapper.feb65d54b04d6988b9dd.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-component-information-wrapper.feb65d54b04d6988b9dd.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>4756</td>
+          <td>1</td>
+          <td>28</td>
+          <td>complex</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-component-quick-user-actions-menu.0a90839fa5e680a7a256.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-component-quick-user-actions-menu.0a90839fa5e680a7a256.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>32318</td>
+          <td>1</td>
+          <td>163</td>
+          <td>very-complex</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-component-simple-promo-collection.eb385914d140560014a2.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-component-simple-promo-collection.eb385914d140560014a2.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>10598</td>
+          <td>1</td>
+          <td>54</td>
+          <td>very-complex</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-component-promo-carousel.d41c5b04317cca69d134.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-component-promo-carousel.d41c5b04317cca69d134.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>11253</td>
+          <td>1</td>
+          <td>49</td>
+          <td>complex</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-simple-promo-collection.836f9b3f807dc239ce43.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-simple-promo-collection.836f9b3f807dc239ce43.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>10534</td>
+          <td>1</td>
+          <td>74</td>
+          <td>very-complex</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-component-rich-text.a3309beb67bd90acccbd.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-component-rich-text.a3309beb67bd90acccbd.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>4341</td>
+          <td>1</td>
+          <td>36</td>
+          <td>complex</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-component-portrait-video-modal.1e87ae227a1dc8c62b00.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-component-portrait-video-modal.1e87ae227a1dc8c62b00.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>12923</td>
+          <td>1</td>
+          <td>66</td>
+          <td>very-complex</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-portrait-video-experience.9bda9bd024160c70c5c5.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-portrait-video-experience.9bda9bd024160c70c5c5.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>10739</td>
+          <td>1</td>
+          <td>43</td>
+          <td>very-complex</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-component-message-banner.880152d79504e39fb4c7.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-component-message-banner.880152d79504e39fb4c7.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>7399</td>
+          <td>1</td>
+          <td>29</td>
+          <td>very-complex</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-message-banner.171e8542d76844e9f00b.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-message-banner.171e8542d76844e9f00b.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>4241</td>
+          <td>1</td>
+          <td>23</td>
+          <td>complex</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-component-static-links.f9d2becd85e6a24347a8.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-component-static-links.f9d2becd85e6a24347a8.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>6080</td>
+          <td>1</td>
+          <td>33</td>
+          <td>complex</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-static-links.246be79bf83e78ecce72.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-static-links.246be79bf83e78ecce72.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>1376</td>
+          <td>1</td>
+          <td>11</td>
+          <td>simple</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td><a href="https://static.files.bbci.co.uk/core/bundle-global-footer.b455999ba143f7cd9df3.js" target="_blank">https://static.files.bbci.co.uk/core/bundle-global-footer.b455999ba143f7cd9df3.js</a></td>
+          <td>third-party</td>
+          <td>external</td>
+          <td>1511</td>
+          <td>1</td>
+          <td>11</td>
+          <td>simple</td>
+          <td>2</td>
+        </tr>
+      
+        <tr>
+          <td>inline@sha256:988b9ca44f58a6430672da55ca7d00ae70416cc8172981111823ef53db2ad966</td>
+          <td>first-party</td>
+          <td>inline</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>trivial</td>
+          <td>1</td>
+        </tr>
+      
+        <tr>
+          <td>inline@sha256:58ef28f9e883916b2bcbc93231aa64dc45284891fd2299ee8afe9c01eed67122</td>
+          <td>first-party</td>
+          <td>inline</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>trivial</td>
+          <td>1</td>
+        </tr>
+      
+      </tbody>
+    </table>
+  
+    </body>
+    </html>
+  
