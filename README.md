@@ -5,98 +5,97 @@ A small tool to crawl a website, inventory all JavaScript it finds, and give you
 - How many **unique scripts** you have  
 - Where they are used  
 - How big they are (size, lines of code)  
-- A rough idea of **complexity** (functions, simple cyclomatic score)
+- A rough idea of **complexity** (functions & a simple cyclomatic score)  
+- Whether they’re **first-party** or **third-party**
 
-This is **v1** – focused purely on discovery and sizing the problem.  
+This is **v1** – focused on discovery and sizing the problem.  
 **v2** will integrate a cheap LLM (e.g. DeepSeek) to analyse script *contents* for security and compliance issues.
 
 ---
 
 ## Why?
 
-Modern sites often accumulate a mess of:
+Modern sites accumulate a mess of:
 
 - First-party JS spread across multiple pages and bundles  
 - Third-party tags, trackers, and widgets  
 - Inline scripts added by various teams or CMS plugins  
 
-If you care about security, privacy, or PCI DSS (e.g. v4 requirements 6.4.3 & 11.6.1), you first need a reliable **script inventory**. This tool gives you a measurable answer to:
+If you care about security, privacy, or PCI DSS (e.g. v4 requirements **6.4.3** & **11.6.1**), you first need a reliable **script inventory**.
 
-> “How many scripts do I actually have, how big are they, and where are they?”
+This tool answers:
+
+> “How many scripts do I actually have, how big are they, how complex are they, and where are they used?”
 
 ---
 
 ## Features (v1)
 
-- 🌐 **Site crawler**
-  - Start from a root URL and follow internal links
-  - Configurable page limit and same-domain restriction
+### Crawling
 
-- 🧾 **Script inventory**
+- 🌐 **Site crawler**
+  - Start from a root URL
+  - Follow internal links (same origin)
+  - Configurable **max pages** to crawl
+
+### Script inventory
+
+- 🧾 **Script discovery**
   - Detects `<script src="...">` and inline `<script>...</script>`
   - De-duplicates scripts across pages
-  - Classifies scripts as **first-party** vs **third-party**
+  - Stable IDs:
+    - External scripts → **absolute URL**
+    - Inline scripts → `inline@sha256:<hash>` of contents
 
-- 📏 **Script metrics**
-  - Size (bytes / KB)
-  - Lines of code
-  - Function count
-  - Rough cyclomatic complexity score → bucketed as:
+- 🧭 **Classification**
+  - **First-party** vs **third-party** based on origin
+  - Tracks `pagesUsedOn[]` and `usageCount` for each script
+
+### Metrics
+
+- 📏 **Per-script metrics**
+  - `sizeBytes` – UTF-8 byte length
+  - `linesOfCode` – number of newline-separated lines
+  - `functionCount` – number of functions found in AST
+  - `complexityBucket` – simple score bucketed into:
     - `trivial`, `simple`, `moderate`, `complex`, `very-complex`
 
-- 📊 **Reporting**
-  - JSON output with per-script and per-site summary
-  - CSV export for spreadsheets / BI tools
-  - Optional HTML report for a quick visual overview
+*(Uses `acorn` + `acorn-walk` for JS parsing. Parsing failures fall back to a default score.)*
 
----
+### Reporting
 
-## Roadmap
+- 📦 **JSON export**
+  - Full crawl results (pages + script inventory + metrics)
+  - Use `--json <file>` to write a JSON report
 
-### v1 – Script inventory & metrics
-
-- [ ] CLI to crawl a single site
-- [ ] Identify unique scripts (external + inline)
-- [ ] First-party vs third-party classification
-- [ ] Per-script metrics (size, LOC, functions, complexity bucket)
-- [ ] Per-site summary (totals, distributions)
-- [ ] JSON + CSV outputs
-- [ ] Basic HTML report
-
-### v2 – LLM-assisted script review
-
-- [ ] Plug-in a cheap LLM (e.g. DeepSeek) for content analysis
-- [ ] Summarise what each script does
-- [ ] Highlight potential security/privacy issues
-- [ ] Flag suspicious patterns (dynamic script loading, eval, exfil domains)
-- [ ] Allow whitelisting of known-good vendor scripts
+- 📄 **HTML report**
+  - Summary cards (pages, unique scripts, first/third-party)
+  - Table of all scripts with metrics and usage
+  - Links to external script URLs
+  - Use `--html <file>` to write a report you can open in a browser
 
 ---
 
 ## Tech stack
 
-This project uses:
-
 - **Node.js + TypeScript**
 - **Cheerio** for HTML parsing
-- **node-fetch** (or native `fetch`) for HTTP requests
-- **Acorn** (or similar) for JavaScript AST parsing
-- A simple **CLI** interface
+- **Fetch API** (Node 18+) for HTTP
+- **Acorn + acorn-walk** for JS AST and metrics
+- Simple **CLI** interface (no framework)
 
 ---
 
-## Quick start (planned)
+## Installation
 
-**This is early-stage.** The goal is:
+### Prerequisites
+
+- Node.js 18+  
+- npm
+
+Clone the repo and install dependencies:
 
 ```bash
-# Crawl a site and output JSON
-script-inventory-auditor crawl \
-  --root-url https://www.example.com \
-  --max-pages 200 \
-  --out ./output/example.json
-
-# Turn JSON into a human-readable report
-script-inventory-auditor report \
-  --in ./output/example.json \
-  --out ./output/example-report.html
+git clone https://github.com/<your-username>/script-inventory-auditor.git
+cd script-inventory-auditor
+npm install
